@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        <nav class="mainnavbar"> <!--<ul><a class="mainnavbaritems"href=""></a></ul>-->
+            <ul><a class="mainnavbaritems" href="index.html">Home</a></ul>
+            <ul><a class="mainnavbaritems" href="tripitin.html">Trip Itinerary</a></ul>
+            <ul><a class="mainnavbaritems" href="dest.html">Destination</a></ul>
+            <ul><a class="mainnavbaritems" href="overdest.html">Overnight Destination</a></ul>
+            <ul><a class="mainnavbaritems" href="activity.html">Activity</a></ul>
+            <ul><a class="mainnavbaritems" href="trav.html">Travel</a></ul>
+            <ul><a class="mainnavbaritems" href="test.html">Test</a></ul>
+        </nav>
+        <header>
+            <!--<h1>Welcome to Pathfinder Take 2&trade;</h1>-->
+        </header>
+        <article>
+            <div class="adddataform">
+<!--This form takes in 4 bits of data, Name of Destination, Type of Destination, When (arrival and departure),  
+Relevant Web Link, and then the Location (either as GPS or as a address) ---JS 20231031-->
+                <form> 
+<!--name in for must match name, go for bonus points and ensure for, name, and id, as well as 
+database field it would be saved within all match ---JS 2023-10-31
+<label for=""></label>
+<input type="" id="" name=""> <input type="datalist" list="" id="typeofdest" name="typeofdest">-->
+                    <label for="nameofdest" >Name of Destination: </label>
+                    <input type="text" id="nameofdest" name="nameofdest">
+                    <br>
+                    <label for="typeofdest">Type of Destination: </label>
+                    <select id="typeofdest" name="typeofdest">
+                        <option>&nbsp;</option>
+                        <option value="Hotel or Motel">Hotel or Motel</option>
+                        <option value="Hostel">Hostel</option>
+                        <option value="Short-Term Rental">Short-Term Rental</option>
+                        <option value="Relative's Residence">Relative's Residence</option>
+                        <option value="Campsite or RV Park">Campsite or RV Park</option>
+                        <!--<option value=""></option>
+                        <option value=""></option>-->
+                    </select>
+                    <br>
+                    <label for="releweblink" >Relevant Web Link: </label>
+                    <input type="link" id="releweblink" name="releweblink">
+                    <br>
+                    <label for="dateofarri" >Date of Arrival: </label>
+                    <input type="date" id="dateofarri" name="dateofarri">
+                    <br>
+                    <label for="dateofdept" >Date of Departure: </label>
+                    <input type="date" id="dateofdept" name="dateofdept">
+                    <br>
+<!--TODO: This location label should later be updated to have javascript to point if this a address or gps coordinates 
+and to be fed into the database correctly thereforth ---JS 20231031 -->
+                    <label for="location" >Location: </label>
+                    <input type="text" id="location" name="location">
+                    <br>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </form>
+            </div>
+        </article>
+        <footer>
+            <div class="footertext">
+                <p>
+                    <i>Created by CSC 4900 Group "Pathfinders". Fall 2023</i>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
