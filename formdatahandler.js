@@ -1,11 +1,11 @@
 function data_thrower(){
-    
+
 }
 function process_dest_form(){
     var nameofdest = document.getElementById("nameofdest").value;
     var typeofdest = document.getElementById("typeofdest").value;
     var releweblink = document.getElementById("releweblink").value;
-    var location = document.getElementById("location").value;
+    var userlocation = document.getElementById("userlocation").value;
     //var x = document.getElementById("x").value;
     // https://stackoverflow.com/questions/45305680/covert-form-data-to-json-string
     let form = document.forms["dest_form"];
