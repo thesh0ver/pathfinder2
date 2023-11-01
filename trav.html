@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Pathfinder</title>
         <link rel="stylesheet" href="stylesheet.css">
+        <script src="formdatahandler.js"></script>
+        <link rel="icon" type="image" href="pathfindericon0.png">
     </head>
     <body>
         <nav class="mainnavbar"> <!--<ul><a class="mainnavbaritems"href=""></a></ul>-->
@@ -14,12 +17,47 @@
             <ul><a class="mainnavbaritems" href="test.html">Test</a></ul>
         </nav>
         <header>
-            <!--<h1>Welcome to Pathfinder Take 2&trade;</h1>-->
+            <!--<h1>Welcome to Pathfinder Take 2&trade;</h1>
+                <label for="" ></label>
+                <input type="" id="" name="">-->
         </header>
         <article>
             <div class="adddataform">
-                <form>
-                    
+                <form name="trav_form" onsubmit="return false;" method="post">
+                    <fieldset>
+                        <label for="typeoftrav" >Type of Travel: </label>
+                        <select id="typeoftrav" name="typeoftrav">
+                            <option>&nbsp;</option>
+                            <option value="Airplane">Airplane</option>
+                            <option value="Train">Train</option>
+                            <option value="Bus">Bus</option>
+                            <option value="Local Public Transit">Local Public Transit</option>
+                            <option value="Automotive">Automotive</option>
+                            <option value="Ferry">Ferry</option>
+                            <option value="Cruiseliner">Cruiseliner</option>
+                            <option value="Walking">Walking</option>
+                            <option value="Other">Other</option>
+                            <!--<option value=""></option>-->
+                        </select>
+                        <br>
+                        <label for="dateofarri" >Date of Arrival: </label>
+                        <input type="date" id="dateofarri" name="dateofarri">
+                        <br>
+                        <label for="startlocation" >Start Location: </label>
+                        <input type="text" id="startlocation" name="startlocation">
+                        <br>
+                        <label for="dateofdept" >Date of Departure: </label>
+                        <input type="date" id="dateofdept" name="dateofdept">
+                        <br>
+                        <label for="finallocation" >Final Location: </label>
+                        <input type="text" id="finallocation" name="finallocation">
+                        <br>
+                        <label for="totaoftrav" >Total of Traveler(s): </label>
+                        <input type="number" id="totaoftrav" name="totaoftrav">
+                        <br>
+                        <input type="submit" value="Submit" onclick="process_trav_form()">
+                        <input type="reset" value="Reset">
+                    </fieldset>
                 </form>
             </div>
         </article>

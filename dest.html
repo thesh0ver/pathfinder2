@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Pathfinder</title>
         <link rel="stylesheet" href="stylesheet.css">
+        <script src="formdatahandler.js"></script>
+        <link rel="icon" type="image" href="pathfindericon0.png">
     </head>
     <body>
         <nav class="mainnavbar"> <!--<ul><a class="mainnavbaritems"href=""></a></ul>-->
@@ -20,7 +23,7 @@
             <div class="adddataform_dest">
 <!--This form takes in 4 bits of data, Name of Destination, Type of Destination, When (arrival and departure),  
 Relevant Web Link, and then the Location (either as GPS or as a address) ---JS 20231031-->
-                <form> 
+                <form name="dest_form" onsubmit="return false;" method="post" > <fieldset>
 <!--name in for must match name, go for bonus points and ensure for, name, and id, as well as 
 database field it would be saved within all match ---JS 2023-10-31
 <label for=""></label>
@@ -54,9 +57,9 @@ and to be fed into the database correctly thereforth ---JS 20231031 -->
                     <label for="location" >Location: </label>
                     <input type="text" id="location" name="location">
                     <br>
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit" onclick="process_dest_form()">
                     <input type="reset" value="Reset">
-                </form>
+                </fieldset></form>
             </div>
         </article>
         <footer>
