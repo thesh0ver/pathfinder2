@@ -1,3 +1,6 @@
+function data_thrower(){
+    
+}
 function process_dest_form(){
     var nameofdest = document.getElementById("nameofdest").value;
     var typeofdest = document.getElementById("typeofdest").value;
