@@ -1,15 +1,15 @@
 <?php // test script for
 $servername = "localhost";
-$username = "admin";
+$username = "root";
 $password = "vaginavaginav@gin@vag9avaginaV@G1N@";
-$dbname = "pfdb";
+$dbname = "pathfinderdb";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // to resolve potential issues
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-    $username = "root";
+    $username = "admin";
     $conn = new mysqli($servername, $username, $password, $dbname);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
@@ -17,7 +17,7 @@ if ($conn->connect_error) {
     }
 }
 // SQL statement to insert data in database, table name is plaholder
-$sql ="INSERT INTO table_name (typeoftrav, dateofarri, startlocation, dateofdept, finallocation, totaoftrav) VALUES (?, ?, ?, ?, ?, ?)";
+$sql ="INSERT INTO trav_table (typeoftrav, dateofarri, startlocation, dateofdept, finallocation, totaoftrav) VALUES (?, ?, ?, ?, ?, ?)";
 // Prepare the query, 
 //Bind the parameters to the query ,
 //and Execute the query.
