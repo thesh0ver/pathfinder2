@@ -1,0 +1,1 @@
+CREATE VIEW `destview` AS SELECT * FROM pathfinderDB.dest_table;

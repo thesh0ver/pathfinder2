@@ -1,0 +1,1 @@
+SELECT * FROM pathfinderDB.dest_table, pathfinderDB.overdest_table, pathfinderDB.trav_table, pathfinderDB.acti_table
