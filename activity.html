@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Pathfinder</title>
         <link rel="stylesheet" href="stylesheet.css">
+        <script src="formdatahandler.js"></script>
+        <link rel="icon" type="image" href="pathfindericon0.png">
     </head>
     <body>
         <nav class="mainnavbar"> <!--<ul><a class="mainnavbaritems"href=""></a></ul>-->
@@ -17,7 +20,7 @@
             <!--<h1>Welcome to Pathfinder Take 2&trade;</h1>-->
         </header>
         <article>
-            <div class="adddataform">
+            <div class="adddataform_acti">
                 <form>
                     <fieldset>
                         <label for="nameofacti" >Name of Activity: </label>
@@ -25,11 +28,13 @@
                         <br>
                         <label for="dateofacti" >Date of Activity: </label>
                         <input type="date" id="dateofacti" name="dateofacti">
-                        <!--TODO: This location label should later be updated to have javascript to point if this a address or gps coordinates 
-and to be fed into the database correctly thereforth ---JS 20231031 -->
-                        <label for="location" >Location: </label>
-                        <input type="text" id="location" name="location">
                         <br>
+                        <label for="descofacti" >Description of Activity: </label>
+                        <!--TODO: Align label to top of textarea box ---JS20231101-->
+                        <textarea rows="5" cols="60" name="descofacti" id="descofacti" placeholder=""></textarea>
+                        <br>
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
                     </fieldset>
                 </form>
             </div>
