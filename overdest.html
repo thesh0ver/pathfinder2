@@ -23,7 +23,7 @@
             <div class="adddataform">
 <!--This form takes in 4 bits of data, Name of Destination, Type of Destination, When (arrival and departure),  
 Relevant Web Link, and then the Location (either as GPS or as a address) ---JS 20231031-->
-                <form> <fieldset>
+                <form name="overdest_form" onsubmit="return false;" method="post" action="dataformhandlerin.php"> <fieldset> <!--added to connect to js file SB20231105-->
 <!--name in for must match name, go for bonus points and ensure for, name, and id, as well as 
 database field it would be saved within all match ---JS 2023-10-31
 <label for=""></label>
@@ -54,8 +54,8 @@ database field it would be saved within all match ---JS 2023-10-31
                     <br>
 <!--TODO: This location label should later be updated to have javascript to point if this a address or gps coordinates 
 and to be fed into the database correctly thereforth ---JS 20231031 -->
-                    <label for="userlocation" >Location: </label>
-                    <input type="text" id="userlocation" name="userlocation">
+                    <label for="location" >Location: </label>
+                    <input type="text" id="location" name="location">
                     <br>
                     <input type="submit" value="Submit">
                     <input type="reset" value="Reset">
