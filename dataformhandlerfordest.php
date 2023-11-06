@@ -1,6 +1,6 @@
 <?php // test script for
 $servername = "localhost";
-$username = "root";
+$username = "id21488732_admin";
 $password = "vaginavaginav@gin@vag9avaginaV@G1N@";
 $dbname = "pathfinderdb";
 

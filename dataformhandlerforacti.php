@@ -1,7 +1,7 @@
 <?php // test script for
 $servername = "localhost";
-$username = "root";
-$password = "vaginavaginav@gin@vag9avaginaV@G1N@";
+$username = "id21488732_admin";
+$password = "vaginavaginav@gin@vag9avaginaV@G1N@"; //id21488732_admin
 $dbname = "pathfinderdb";
 
 // Create connection

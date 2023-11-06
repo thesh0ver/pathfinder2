@@ -1,6 +1,6 @@
 <?php // test script for
 $servername = "localhost";
-$username = "root";
+$username = "id21488732_admin";
 $password = "vaginavaginav@gin@vag9avaginaV@G1N@";
 $dbname = "pathfinderdb";
 
@@ -8,13 +8,7 @@ $dbname = "pathfinderdb";
 $conn = new mysqli($servername, $username, $password, $dbname);
 // to resolve potential issues
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-    $username = "admin";
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-        echo "<script>console.log("+"Connection failed: " + $conn->connect_error+")</script>";
-    }
+    die("Connection failed: " . $conn->connect_error);    
 }
 // SQL statement to insert data in database, table name is plaholder
 $sql ="INSERT INTO trav_table (typeoftrav, dateofarri, startlocation, dateofdept, finallocation, totaoftrav) VALUES (?, ?, ?, ?, ?, ?)";
