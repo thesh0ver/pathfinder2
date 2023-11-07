@@ -17,7 +17,7 @@ if ($conn->connect_error) {
     }
 }
 // SQL statement to insert data in database, table name is plaholder
-$sql ="INSERT INTO acti_table (nameofacti, dateofacti, descofacti, userid) VALUES (?, ?, ? , ?)";
+$sql ="INSERT INTO acti_table (nameofacti, dateofacti, descofacti, userid) VALUES (?, ?, ?, ?)";
 // Prepare the query, 
 //Bind the parameters to the query ,
 //and Execute the query.
