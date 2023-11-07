@@ -1,4 +1,7 @@
 <?php // test script for
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 $servername = "localhost";
 $username = "id21488732_admin";
 $password = "vaginavaginav@gin@vag9avaginaV@G1N@";
