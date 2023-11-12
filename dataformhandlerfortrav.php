@@ -1,37 +1,27 @@
 <?php // test script for
 $servername = "localhost";
 $username = "id21488732_admin";
-$password = "Penispenis@@123";
-$dbname = "pathfinderdb";
+$password = "vaginavaginav@gin@vag9avaginaV@G1N@";
+$dbname = "id21488732_pathfinderdb";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// to resolve potential issues
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-    $username = "admin";
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-        echo "<script>console.log("+"Connection failed: " + $conn->connect_error+")</script>";
-    }
+try{
+// // Create connection
+$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$typeoftrav=$_POST['typeoftrav'];
+$dateofarri=$_POST['dateofarri'];
+$startlocation=$_POST['startlocation'];
+$dateofdept=$_POST['dateofdept'];
+$finallocation=$_POST['finallocation'];
+$totaoftrav=$_POST['totaoftrav'];
+$userid=$_POST['userid'];
+$conn->beginTransaction();
+$conn->exec("INSERT INTO trav_table (typeoftrav, dateofarri, startlocation, dateofdept, finallocation, totaoftrav, userid) VALUES ('$typeoftrav', '$dateofarri', '$startlocation', '$dateofdept', '$finallocation', '$totaoftrav', '$userid')"); //('$testbit')
+$conn->commit();
+echo "Test";
+}catch(PDOException $e) {
+   
+  echo "Error: " . $e->getMessage();
 }
-// SQL statement to insert data in database, table name is plaholder
-$sql ="INSERT INTO trav_table (typeoftrav, dateofarri, startlocation, dateofdept, finallocation, totaoftrav) VALUES (?, ?, ?, ?, ?, ?)";
-// Prepare the query, 
-//Bind the parameters to the query ,
-//and Execute the query.
-$stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, "ssssss", $_POST["typeoftrav"], $_POST["dateofarri"], $_POST["startlocation"], $_POST["dateofdept"], $_POST["finallocation"], $_POST["totaoftrav"]);
-mysqli_stmt_execute($stmt);
-
-// if 
-// if ($conn->query($sql) === TRUE) {
-//     echo "New record created successfully";
-//   } else { // if statement fails
-//     echo "Error: " . $sql . "<br>" . $conn->error;
-//   }
-  
-$conn->close();
-
+$conn = null;
 ?>

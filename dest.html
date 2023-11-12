@@ -23,7 +23,7 @@
             <div class="adddataform_dest">
 <!--This form takes in 4 bits of data, Name of Destination, Type of Destination, When (arrival and departure),  
 Relevant Web Link, and then the Location (either as GPS or as a address) ---JS 20231031-->
-                <form name="dest_form" onsubmit="return false;" method="post" action="dataformhandlerin.php" > <fieldset>
+                <form name="dest_form" onsubmit="return false;" method="post" action="dataformhandlerfordest.php" > <fieldset>
 <!--name in for must match name, go for bonus points and ensure for, name, and id, as well as 
 database field it would be saved within all match ---JS 2023-10-31
 <label for=""></label>
@@ -46,16 +46,13 @@ database field it would be saved within all match ---JS 2023-10-31
                     <label for="releweblink" >Relevant Web Link: </label>
                     <input type="link" id="releweblink" name="releweblink">
                     <br>
-                    <!-- <label for="dateofarri" >Date of Arrival: </label>
-                    <input type="date" id="dateofarri" name="dateofarri">
-                    <br>
-                    <label for="dateofdept" >Date of Departure: </label>
-                    <input type="date" id="dateofdept" name="dateofdept">
-                    <br> -->
 <!--TODO: This location label should later be updated to have javascript to point if this a address or gps coordinates 
 and to be fed into the database correctly thereforth ---JS 20231031 -->
                     <label for="userlocation" >Location: </label>
                     <input type="text" id="userlocation" name="userlocation">
+                    <br>
+                    <label for="userid" >User ID: </label>
+                    <input type="text" id="userid" name="userid"> 
                     <br>
                     <input type="submit" value="Submit" onclick="process_dest_form()">
                     <input type="reset" value="Reset">
