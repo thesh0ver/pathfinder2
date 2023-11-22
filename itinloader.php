@@ -5,14 +5,24 @@ $password = "vaginavaginav@gin@vag9avaginaV@G1N@";
 $dbname = "id21488732_pathfinderdb";
 
 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION, PDO::ATTR_EMULATE_PREPARES);
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //, PDO::ATTR_EMULATE_PREPARES
 
-if (isset($_POST['action'])) {
-    switch ($_POST['action']) {
-        case 'Load Activity Data':
-            writetable($conn, "acti_table");
-            break;
-    }
+// if (isset($_POST['action'])) {
+//     switch ($_POST['action']) {
+//         case 'Load Activity Data':
+//             callwritetable();
+//             break;
+//     }
+// }
+
+function callwritetable(){
+    $servername = "localhost";
+    $username = "id21488732_admin";
+    $password = "vaginavaginav@gin@vag9avaginaV@G1N@";
+    $dbname = "id21488732_pathfinderdb";
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //, PDO::ATTR_EMULATE_PREPARES
+    writetable($conn, "acti_table");
 }
 
 function writetable(pdo $conn, string $table){ // begin copied code

@@ -7,10 +7,19 @@ $dbname = "id21488732_pathfinderdb";
 // // Create connection
 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$testbit=$_POST['testbit'];
-$conn->beginTransaction();
-$conn->exec("INSERT INTO test_table (test) VALUES ('$testbit')"); //('$testbit')
-$conn->commit();
-echo "Test";
-
+//$testbit=$_POST['testbit'];
+//$conn->beginTransaction();
+$sqlcode="SELECT * FROM trav_table";
+//SELECT * FROM test_table
+$stmt = $conn->prepare($sqlcode);
+$stmt->execute();//($sqlcode); //('$testbit') //(test) VALUES ('$testbit')
+$stmt->setFetchMode(PDO::FETCH_ASSOC);
+$data = $stmt->fetchAll();
+// $data = $conn->setFetchMode(PDO::FETCH_ASSOC); 
+//$conn->commit();
+//$data = $conn-> fetchAll(); //["testbit"]
+foreach($data as $iii){
+    echo  " " . array_pop($iii);
+}
+//echo implode("",$data);
 ?>

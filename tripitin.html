@@ -3,7 +3,7 @@
     <head>
         <title>Pathfinder</title>
         <link rel="stylesheet" href="stylesheet.css">
-        <script src="formdatahandler.js"></script>
+        <script src="loadbridgeajax.js"></script>
         <link rel="icon" type="image" href="pathfindericon0.png">
     </head>
     <body>
@@ -17,11 +17,13 @@
             <ul><a class="mainnavbaritems" href="test.html">Test</a></ul>
         </nav>
         <header>
-            <!--<h1>Welcome to Pathfinder Take 2&trade;</h1>-->
+            <!--<h1>Welcome to Pathfinder Take 2&trade;</h1> onclick="itinloader.php"-->
         </header>
         <article>
             <div class="acti_data_list" >
-                <input type="submit" class="button" name="Load Activity Data" value="Load Activity Data" />
+                <form name="acti_load_form" action="loadactidata()" method="post">
+                    <input type="submit" class="button" name="Load Activity Data" value="Load Activity Data"  />
+                </form>
             </div>
         </article>
         <footer>
